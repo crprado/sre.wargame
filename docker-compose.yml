@@ -20,8 +20,8 @@ services:
     container_name: 'gamehistory-db'
     environment:
      - MONGO_INITDB_DATABASE=gamehistory
-     - MONGO_INITDB_ROOT_USERNAME=${dbroot}
-     - MONGO_INITDB_ROOT_PASSWORD=${dbpassword}
+     - MONGO_INITDB_ROOT_USERNAME=dbroot
+     - MONGO_INITDB_ROOT_PASSWORD=dbpassword
     volumes:
      - ./init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
      - ./mongo-volume:/data/db

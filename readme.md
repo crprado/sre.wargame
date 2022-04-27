@@ -2,7 +2,7 @@
 
 ## Requirements
 
-The latest version of docker and docker-compose is require for this build.
+The latest versions of docker and docker-compose are require for this build.
 
 ## Clone the repository
 

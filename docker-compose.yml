@@ -1,0 +1,31 @@
+version: '3'
+services:
+  web:
+    image: maomoa/wargameweb
+    ports:
+     - '5000:5000'
+
+  gameapi:
+    image: maomoa/wargameapi
+    ports:
+     - '5001:5001'
+
+  gamehistoryapi:
+    image: maomoa/wargamehistoryapi
+    ports:
+     - '5002:5002'
+
+  database:
+    image: 'mongo'
+    container_name: 'gamehistory-db'
+    environment:
+     - MONGO_INITDB_DATABASE=gamehistory
+     - MONGO_INITDB_ROOT_USERNAME=${dbroot}
+     - MONGO_INITDB_ROOT_PASSWORD=${dbpassword}
+    volumes:
+     - ./init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+     - ./mongo-volume:/data/db
+    ports:
+     - '27017-27019:27017-27019'
+    sysctls:
+     - net.ipv6.conf.all.disable_ipv6=0

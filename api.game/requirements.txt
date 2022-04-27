@@ -1,0 +1,6 @@
+flask
+flask-restful
+flask-mongoengine
+pyyaml
+requests
+pymongo

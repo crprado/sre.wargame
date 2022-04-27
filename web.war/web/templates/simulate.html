@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>War</title>
+        <style>
+            nav a {
+                color: #d64161;
+                font-size: 1em;
+                margin-left: 50px;
+                text-decoration: none;
+            }
+        </style>
+	</head>
+
+	<body>
+        <nav>
+            <a href="/simulate">Simulate Game</a>
+            <a href="/stats">Player Stats</a>
+         </nav>
+        <div class="content">
+            <body>
+                <form action="/simulationresults" method="POST">
+                   Player One: <input type = "text" name = "playerOne" />
+                   <br>
+                   Player Two: <input type = "text" name = "playerTwo" />
+                   <br>
+                   <input type = "submit" name = "submit" value = "Submit" />
+                </form>
+             </body>
+        </div>
+
+	</body>
+</html>

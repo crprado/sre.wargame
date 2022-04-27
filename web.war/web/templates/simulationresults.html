@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<span><b>Winner:</b> {{ result["winner"] }}</span>
+<br>
+<span><b>Game ID:</b> {{ result["gameID"] }}</span>
+<br>
+<br>
+<span><b>Hands Played</b></span>
+{% for hand in result["handsHistory"] %}
+    <br>
+    Hand: {{loop.index}}
+    <br>
+    {{result["players"][0]}}: {{hand[0]}}
+    <br>
+    {{result["players"][1]}}: {{hand[1]}}
+    <br>
+{% endfor %}
+{% endblock %}

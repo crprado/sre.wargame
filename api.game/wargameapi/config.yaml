@@ -1,0 +1,2 @@
+gamehistory:
+  url: http://gamehistoryapi:5002/insert

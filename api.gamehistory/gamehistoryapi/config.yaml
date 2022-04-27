@@ -1,0 +1,6 @@
+dbsettings:
+  database: gamehistory
+  host: database
+  port: 27017
+  user: gameapp
+  password: nonprodthing
